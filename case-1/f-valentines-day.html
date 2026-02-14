@@ -1,1 +1,32 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // তোমার দুইটা লিংক এখানে বসাও
+    const link1 = "https://gplinks.co/xMPnLJNR";
+    const link2 = "https://cuty.io/I63Q";
+
+    // আগের ক্লিকের স্টেট বের করা
+    let lastVisited = localStorage.getItem("lastLink");
+
+    let nextLink;
+
+    if (lastVisited === "link1") {
+      nextLink = link2;
+      localStorage.setItem("lastLink", "link2");
+    } else {
+      nextLink = link1;
+      localStorage.setItem("lastLink", "link1");
+    }
+
+    // রিডাইরেক্ট
+    window.location.href = nextLink;
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
